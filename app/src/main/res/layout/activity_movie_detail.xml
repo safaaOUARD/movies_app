@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- ✅ ScrollView pour éviter le contenu coupé sur petits écrans -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Carte film -->
+            <androidx.cardview.widget.CardView
+                app:cardElevation="8dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageview"
+                        android:layout_margin="8dp"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:scaleType="centerCrop"/>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/textName"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="#212121"
+                            android:layout_marginBottom="8dp"
+                            android:text="Titre du film"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/Details"
+                            android:textColor="#555555"
+                            android:textSize="13sp"
+                            android:text="Description..."
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Bouton Trailer -->
+            <Button
+                android:id="@+id/playButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="▶ Voir le Trailer"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#E53935"/>
+
+            <!-- Titre section carte -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📍 Cinémas à proximité"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#212121"
+                android:layout_marginLeft="12dp"
+                android:layout_marginBottom="6dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ✅ Carte Google Maps en bas (hauteur fixe) -->
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"/>
+
+</LinearLayout>

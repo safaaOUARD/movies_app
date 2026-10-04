@@ -1,67 +1,80 @@
 # 🎬 Movies App
-## Description
-Movies App est une application Android intelligente de recommandation et de consultation de films. Elle adapte l'expérience utilisateur en fonction de l'âge détecté et des préférences de chaque utilisateur afin de proposer un contenu personnalisé et sécurisé.
-## Fonctionnalités principales
 
-### 🤖Détection d'âge par Intelligence Artificielle
+> Application Android de recommandation et de consultation de films qui adapte le contenu à l'âge détecté et aux préférences de l'utilisateur, avec un mode enfant protégé par code parental.
 
-Au lancement de l'application, une intelligence artificielle analyse l'âge approximatif de l'utilisateur. Selon le résultat obtenu, l'application adapte automatiquement le contenu affiché et les fonctionnalités accessibles.
+![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)
+![Java](https://img.shields.io/badge/Java-orange)
+![Gradle](https://img.shields.io/badge/Build-Gradle-02303A?logo=gradle)
 
-### 😊 Sélection de l'humeur
+🎥 **[Voir la vidéo de démonstration](https://drive.google.com/file/d/1mdZdXoB4DXtFLFqDu2JeaPLej9e2sxgL/view?usp=drivesdk)**
 
-L'utilisateur peut sélectionner son humeur afin de recevoir des recommandations de films plus pertinentes et adaptées à son état d'esprit.
+## 📌 Présentation
 
-### 👤 Choix du mode utilisateur
+Movies App propose une expérience personnalisée et sécurisée : l'application estime l'âge de l'utilisateur au lancement, puis adapte automatiquement le catalogue, les recommandations et les fonctionnalités accessibles.
 
-L'application propose trois modes :
+## ✨ Fonctionnalités
 
-* **Mode Enfant**
-* **Mode Adolescent**
-* **Mode Adulte**
+### Personnalisation et sécurité
+- 🤖 **Détection d'âge par intelligence artificielle** au lancement, pour adapter le contenu affiché
+- 👤 **Trois modes utilisateur** : Enfant, Adolescent et Adulte, chacun avec ses restrictions et ses recommandations
+- 🔒 **Contrôle parental** : le mode Enfant ne peut être désactivé qu'avec un code parental
+- 🔞 **Contenu adulte (+18)** : affichage ou masquage au choix de l'utilisateur
+- 😊 **Sélection de l'humeur** pour des recommandations adaptées à l'état d'esprit
 
-Chaque mode applique des restrictions et des recommandations adaptées à la tranche d'âge concernée.
+### Découverte des films
+- 🎥 **Catalogue personnalisé** selon le mode choisi et les préférences
+- 🎤 **Recherche vocale** pour trouver un film sans clavier
+- 📄 **Page détaillée** de chaque film : affiche, description, note moyenne, catégorie et genre
+- ⭐ **Favoris** : ajout et suppression de films
 
-### 🔞 Gestion du contenu pour adultes
+### Communauté et services
+- ⭐ **Notation par étoiles**
+- 💬 **Commentaires** sur les films
+- 📍 **Cinéma le plus proche** de la position de l'utilisateur
 
-L'utilisateur peut choisir d'afficher ou de masquer les films réservés aux adultes (+18). Cette fonctionnalité permet un meilleur contrôle du contenu proposé.
+## 🛠️ Stack technique
 
-### 🎥 Catalogue de films personnalisé
+| Domaine | Technologie |
+|---|---|
+| Plateforme | Android |
+| Langage | Java |
+| Build | Gradle (Kotlin DSL) |
+| IDE | Android Studio |
 
-Les films sont affichés en fonction du mode sélectionné et des préférences de l'utilisateur afin de garantir une expérience adaptée à son profil.
+## 🚀 Lancer le projet
 
-### ⭐ Gestion des favoris
+### Prérequis
+- Android Studio (version récente)
+- Un appareil Android ou un émulateur
+- Un accès Internet
 
-L'utilisateur peut ajouter ou supprimer des films de sa liste de favoris afin de retrouver facilement ses contenus préférés.
+### Installation
 
-### 🎤 Recherche vocale
+```bash
+git clone https://github.com/safaaOUARD/movies_app.git
+```
 
-L'application intègre une fonctionnalité de recherche vocale permettant de trouver rapidement un film sans saisir de texte au clavier.
+1. Ouvrir le dossier dans **Android Studio**.
+2. Attendre la synchronisation de Gradle.
+3. Lancer l'application sur un émulateur ou un appareil physique (*Run ▶*).
 
-### 📄 Détails des films
+L'application utilise des fonctionnalités nécessitant des autorisations Android (par exemple le microphone pour la recherche vocale et la localisation pour trouver le cinéma le plus proche) : acceptez-les au premier lancement.
 
-Chaque film possède une page détaillée contenant :
+## 🧠 Compétences mises en pratique
 
-* Informations générales sur le film
-* Affiche et description
-* Note moyenne
-* Catégorie et genre
+- Développement d'une application Android complète
+- Intégration d'une IA pour la détection d'âge
+- Gestion de profils utilisateurs et de restrictions de contenu
+- Reconnaissance vocale et géolocalisation
+- Conception d'une interface adaptée à plusieurs publics
 
-### ⭐ Système de notation
+## 🔭 Améliorations possibles
 
-Les utilisateurs peuvent attribuer une note aux films à l'aide d'un système d'étoiles afin de partager leur appréciation.
+- Ajouter des captures d'écran et des tests automatisés
+- Synchroniser les favoris et les commentaires dans le cloud
+- Améliorer les recommandations avec les notes de la communauté
 
-### 💬 Commentaires
+## 👤 Auteure
 
-Chaque utilisateur peut rédiger et consulter des commentaires concernant les films visionnés.
-
-### 📍 Cinéma le plus proche
-
-L'application permet de localiser le cinéma le plus proche de la position de l'utilisateur afin de faciliter l'accès aux séances disponibles.
-
-### 🔒 Contrôle parental
-
-Lorsque le Mode Enfant est activé, il ne peut être désactivé qu'à l'aide d'un code parental. Cette mesure garantit la sécurité des jeunes utilisateurs et empêche toute modification non autorisée des paramètres de protection.
-
-## 🎥 Vidéo de démonstration
-
-Voir la vidéo démonstration : https://drive.google.com/file/d/1mdZdXoB4DXtFLFqDu2JeaPLej9e2sxgL/view?usp=drivesdk 
+**Safaa OUARD** — Étudiante ingénieure en Systèmes d'Information et de Communication, ENSA El Jadida
+[GitHub](https://github.com/safaaOUARD)
